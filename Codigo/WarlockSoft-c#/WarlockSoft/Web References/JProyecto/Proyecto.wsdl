@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://Servicios/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="Proyecto" targetNamespace="http://Servicios/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/WarlockSoft/Proyecto?xsd=1" namespace="http://Servicios/" />
+    </xsd:schema>
+  </types>
+  <message name="obtenerMisProyectos">
+    <part name="parameters" element="tns:obtenerMisProyectos" />
+  </message>
+  <message name="obtenerMisProyectosResponse">
+    <part name="parameters" element="tns:obtenerMisProyectosResponse" />
+  </message>
+  <message name="agregarTareaAlProyecto">
+    <part name="parameters" element="tns:agregarTareaAlProyecto" />
+  </message>
+  <message name="agregarTareaAlProyectoResponse">
+    <part name="parameters" element="tns:agregarTareaAlProyectoResponse" />
+  </message>
+  <message name="agregarProyecto">
+    <part name="parameters" element="tns:agregarProyecto" />
+  </message>
+  <message name="agregarProyectoResponse">
+    <part name="parameters" element="tns:agregarProyectoResponse" />
+  </message>
+  <message name="obtenerProyectos">
+    <part name="parameters" element="tns:obtenerProyectos" />
+  </message>
+  <message name="obtenerProyectosResponse">
+    <part name="parameters" element="tns:obtenerProyectosResponse" />
+  </message>
+  <message name="obtenerTareas">
+    <part name="parameters" element="tns:obtenerTareas" />
+  </message>
+  <message name="obtenerTareasResponse">
+    <part name="parameters" element="tns:obtenerTareasResponse" />
+  </message>
+  <message name="obtenerDatosProyecto">
+    <part name="parameters" element="tns:obtenerDatosProyecto" />
+  </message>
+  <message name="obtenerDatosProyectoResponse">
+    <part name="parameters" element="tns:obtenerDatosProyectoResponse" />
+  </message>
+  <message name="cambiarEstado">
+    <part name="parameters" element="tns:cambiarEstado" />
+  </message>
+  <message name="cambiarEstadoResponse">
+    <part name="parameters" element="tns:cambiarEstadoResponse" />
+  </message>
+  <portType name="Proyecto">
+    <operation name="obtenerMisProyectos">
+      <input wsam:Action="http://Servicios/Proyecto/obtenerMisProyectosRequest" message="tns:obtenerMisProyectos" />
+      <output wsam:Action="http://Servicios/Proyecto/obtenerMisProyectosResponse" message="tns:obtenerMisProyectosResponse" />
+    </operation>
+    <operation name="agregarTareaAlProyecto">
+      <input wsam:Action="http://Servicios/Proyecto/agregarTareaAlProyectoRequest" message="tns:agregarTareaAlProyecto" />
+      <output wsam:Action="http://Servicios/Proyecto/agregarTareaAlProyectoResponse" message="tns:agregarTareaAlProyectoResponse" />
+    </operation>
+    <operation name="agregarProyecto">
+      <input wsam:Action="http://Servicios/Proyecto/agregarProyectoRequest" message="tns:agregarProyecto" />
+      <output wsam:Action="http://Servicios/Proyecto/agregarProyectoResponse" message="tns:agregarProyectoResponse" />
+    </operation>
+    <operation name="obtenerProyectos">
+      <input wsam:Action="http://Servicios/Proyecto/obtenerProyectosRequest" message="tns:obtenerProyectos" />
+      <output wsam:Action="http://Servicios/Proyecto/obtenerProyectosResponse" message="tns:obtenerProyectosResponse" />
+    </operation>
+    <operation name="obtenerTareas">
+      <input wsam:Action="http://Servicios/Proyecto/obtenerTareasRequest" message="tns:obtenerTareas" />
+      <output wsam:Action="http://Servicios/Proyecto/obtenerTareasResponse" message="tns:obtenerTareasResponse" />
+    </operation>
+    <operation name="obtenerDatosProyecto">
+      <input wsam:Action="http://Servicios/Proyecto/obtenerDatosProyectoRequest" message="tns:obtenerDatosProyecto" />
+      <output wsam:Action="http://Servicios/Proyecto/obtenerDatosProyectoResponse" message="tns:obtenerDatosProyectoResponse" />
+    </operation>
+    <operation name="cambiarEstado">
+      <input wsam:Action="http://Servicios/Proyecto/cambiarEstadoRequest" message="tns:cambiarEstado" />
+      <output wsam:Action="http://Servicios/Proyecto/cambiarEstadoResponse" message="tns:cambiarEstadoResponse" />
+    </operation>
+  </portType>
+  <binding name="ProyectoPortBinding" type="tns:Proyecto">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="obtenerMisProyectos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="agregarTareaAlProyecto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="agregarProyecto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerProyectos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerTareas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerDatosProyecto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="cambiarEstado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="Proyecto">
+    <port name="ProyectoPort" binding="tns:ProyectoPortBinding">
+      <soap:address location="http://localhost:8080/WarlockSoft/Proyecto" />
+    </port>
+  </service>
+</definitions>

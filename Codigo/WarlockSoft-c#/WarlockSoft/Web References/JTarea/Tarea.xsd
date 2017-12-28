@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://Servicios/" targetNamespace="http://Servicios/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="agregarTarea" type="tns:agregarTarea" />
+  <xs:element name="agregarTareaResponse" type="tns:agregarTareaResponse" />
+  <xs:element name="cambiarEstado" type="tns:cambiarEstado" />
+  <xs:element name="cambiarEstadoResponse" type="tns:cambiarEstadoResponse" />
+  <xs:element name="obtenerDatosTarea" type="tns:obtenerDatosTarea" />
+  <xs:element name="obtenerDatosTareaResponse" type="tns:obtenerDatosTareaResponse" />
+  <xs:element name="obtenerMisTareasIndividuales" type="tns:obtenerMisTareasIndividuales" />
+  <xs:element name="obtenerMisTareasIndividualesResponse" type="tns:obtenerMisTareasIndividualesResponse" />
+  <xs:element name="obtenerTareasIndividuales" type="tns:obtenerTareasIndividuales" />
+  <xs:element name="obtenerTareasIndividualesResponse" type="tns:obtenerTareasIndividualesResponse" />
+  <xs:complexType name="obtenerDatosTarea">
+    <xs:sequence>
+      <xs:element name="id_tarea" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerDatosTareaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="agregarTarea">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="diaIni" type="xs:int" />
+      <xs:element name="mesIni" type="xs:int" />
+      <xs:element name="anoIni" type="xs:int" />
+      <xs:element name="precio" type="xs:double" />
+      <xs:element name="tiempoEstimado" type="xs:int" />
+      <xs:element name="cantidadParticipantes" type="xs:int" />
+      <xs:element minOccurs="0" name="estado" type="xs:string" />
+      <xs:element name="id_usuario" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="conocimientos" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="agregarTareaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerMisTareasIndividuales">
+    <xs:sequence>
+      <xs:element name="id_usuario" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerMisTareasIndividualesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerTareasIndividuales">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="obtenerTareasIndividualesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cambiarEstado">
+    <xs:sequence>
+      <xs:element name="id_tarea" type="xs:int" />
+      <xs:element minOccurs="0" name="estado" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cambiarEstadoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

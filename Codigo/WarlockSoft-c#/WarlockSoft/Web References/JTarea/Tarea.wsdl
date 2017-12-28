@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://Servicios/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="Tarea" targetNamespace="http://Servicios/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/WarlockSoft/Tarea?xsd=1" namespace="http://Servicios/" />
+    </xsd:schema>
+  </types>
+  <message name="obtenerDatosTarea">
+    <part name="parameters" element="tns:obtenerDatosTarea" />
+  </message>
+  <message name="obtenerDatosTareaResponse">
+    <part name="parameters" element="tns:obtenerDatosTareaResponse" />
+  </message>
+  <message name="obtenerTareasIndividuales">
+    <part name="parameters" element="tns:obtenerTareasIndividuales" />
+  </message>
+  <message name="obtenerTareasIndividualesResponse">
+    <part name="parameters" element="tns:obtenerTareasIndividualesResponse" />
+  </message>
+  <message name="agregarTarea">
+    <part name="parameters" element="tns:agregarTarea" />
+  </message>
+  <message name="agregarTareaResponse">
+    <part name="parameters" element="tns:agregarTareaResponse" />
+  </message>
+  <message name="obtenerMisTareasIndividuales">
+    <part name="parameters" element="tns:obtenerMisTareasIndividuales" />
+  </message>
+  <message name="obtenerMisTareasIndividualesResponse">
+    <part name="parameters" element="tns:obtenerMisTareasIndividualesResponse" />
+  </message>
+  <message name="cambiarEstado">
+    <part name="parameters" element="tns:cambiarEstado" />
+  </message>
+  <message name="cambiarEstadoResponse">
+    <part name="parameters" element="tns:cambiarEstadoResponse" />
+  </message>
+  <portType name="Tarea">
+    <operation name="obtenerDatosTarea">
+      <input wsam:Action="http://Servicios/Tarea/obtenerDatosTareaRequest" message="tns:obtenerDatosTarea" />
+      <output wsam:Action="http://Servicios/Tarea/obtenerDatosTareaResponse" message="tns:obtenerDatosTareaResponse" />
+    </operation>
+    <operation name="obtenerTareasIndividuales">
+      <input wsam:Action="http://Servicios/Tarea/obtenerTareasIndividualesRequest" message="tns:obtenerTareasIndividuales" />
+      <output wsam:Action="http://Servicios/Tarea/obtenerTareasIndividualesResponse" message="tns:obtenerTareasIndividualesResponse" />
+    </operation>
+    <operation name="agregarTarea">
+      <input wsam:Action="http://Servicios/Tarea/agregarTareaRequest" message="tns:agregarTarea" />
+      <output wsam:Action="http://Servicios/Tarea/agregarTareaResponse" message="tns:agregarTareaResponse" />
+    </operation>
+    <operation name="obtenerMisTareasIndividuales">
+      <input wsam:Action="http://Servicios/Tarea/obtenerMisTareasIndividualesRequest" message="tns:obtenerMisTareasIndividuales" />
+      <output wsam:Action="http://Servicios/Tarea/obtenerMisTareasIndividualesResponse" message="tns:obtenerMisTareasIndividualesResponse" />
+    </operation>
+    <operation name="cambiarEstado">
+      <input wsam:Action="http://Servicios/Tarea/cambiarEstadoRequest" message="tns:cambiarEstado" />
+      <output wsam:Action="http://Servicios/Tarea/cambiarEstadoResponse" message="tns:cambiarEstadoResponse" />
+    </operation>
+  </portType>
+  <binding name="TareaPortBinding" type="tns:Tarea">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="obtenerDatosTarea">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerTareasIndividuales">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="agregarTarea">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerMisTareasIndividuales">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="cambiarEstado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="Tarea">
+    <port name="TareaPort" binding="tns:TareaPortBinding">
+      <soap:address location="http://localhost:8080/WarlockSoft/Tarea" />
+    </port>
+  </service>
+</definitions>

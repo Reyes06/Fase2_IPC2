@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://Servicios/" targetNamespace="http://Servicios/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="obtenerConocimientos" type="tns:obtenerConocimientos" />
+  <xs:element name="obtenerConocimientosResponse" type="tns:obtenerConocimientosResponse" />
+  <xs:element name="obtenerConocimientosUsuario" type="tns:obtenerConocimientosUsuario" />
+  <xs:element name="obtenerConocimientosUsuarioResponse" type="tns:obtenerConocimientosUsuarioResponse" />
+  <xs:complexType name="obtenerConocimientos">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="obtenerConocimientosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerConocimientosUsuario">
+    <xs:sequence>
+      <xs:element name="id_usuario" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerConocimientosUsuarioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
